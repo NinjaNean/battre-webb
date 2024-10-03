@@ -9,6 +9,7 @@
   --font-color: #fff2e3;
   --primary-color: #3d527d;
   --secondary-color: #f1571a;
+  --background-color: #212121;
 }
 
 body {
@@ -21,7 +22,7 @@ nav {
   align-items: start;
   font-size: 1.5rem;
   padding: 1rem;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   color: var(--font-color);
 
   ol {
@@ -49,7 +50,7 @@ nav {
 
 header {
   padding: 0.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   color: var(--font-color);
   justify-content: space-between;
   min-height: 80vh;
@@ -85,7 +86,7 @@ header {
 
     p {
       background-color: var(--font-color);
-      color: var(--primary-color);
+      color: var(--background-color);
       width: fit-content;
       padding: 0.5rem;
       text-transform: uppercase;
@@ -112,6 +113,8 @@ header {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      background-color: var(--background-color);
+      color: var(--font-color);
     }
   }
 }
@@ -204,8 +207,6 @@ header {
       align-items: center;
       margin: 5rem 0;
       width: fit-content;
-      border: 5px solid var(--primary-color);
-      box-shadow: 0px 0px 15px 5px #a79e93;
 
       img {
         height: 500px;
