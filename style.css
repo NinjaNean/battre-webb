@@ -47,6 +47,51 @@ nav {
   }
 }
 
+header {
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .slogan {
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .when-where {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: end;
+    position: relative;
+    left: 0.5rem;
+    padding-top: 1rem;
+
+    p {
+      background-color: var(--font-color);
+      color: var(--secondary-color);
+      width: fit-content;
+      padding: 0.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    span {
+      letter-spacing: 0;
+    }
+  }
+}
+
 @media (min-width: 700px) {
   nav {
     align-items: center;
@@ -54,6 +99,23 @@ nav {
     ol {
       flex-direction: row;
       gap: 1.5rem;
+    }
+  }
+
+  header {
+    display: flex;
+
+    img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    div {
+      padding: 1rem;
+
+      .when-where {
+        left: 2.5rem;
+      }
     }
   }
 }
