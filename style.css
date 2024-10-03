@@ -84,12 +84,14 @@ header {
 
     p {
       background-color: var(--font-color);
-      color: var(--secondary-color);
+      color: var(--primary-color);
       width: fit-content;
       padding: 0.5rem;
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 2px;
+      border: 2px solid var(--secondary-color);
+      border-right: none;
     }
 
     span {
@@ -131,13 +133,44 @@ header {
         background-color: var(--font-color);
         color: var(--secondary-color);
         border-radius: 0.5rem;
+        position: relative;
       }
-      a:hover {
-        scale: 1.1;
+      a::before {
+        content: "Gå till biljettförsäljning!";
+        position: absolute;
+        top: 4rem;
+        background-color: var(--secondary-color);
+        color: var(--font-color);
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        opacity: 0;
+      }
+      a::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-bottom: 10px solid var(--secondary-color);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        top: 3.4rem;
+        left: 1rem;
+        opacity: 0;
+      }
+
+      a:hover::after,
+      a:hover::before {
+        opacity: 1;
       }
 
       .when-where {
         left: 3rem;
+
+        p {
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }
