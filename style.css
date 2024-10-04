@@ -108,6 +108,8 @@ header {
 
 .home-page {
   .container {
+    color: var(--background-color);
+
     img {
       width: 100%;
     }
@@ -117,8 +119,6 @@ header {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      background-color: var(--background-color);
-      color: var(--font-color);
     }
   }
 }
@@ -161,6 +161,60 @@ header {
 
       p {
         width: 250px;
+      }
+    }
+  }
+}
+
+footer {
+  min-height: 330px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+
+  form {
+    display: grid;
+    gap: 1rem;
+
+    .input-button-newsletter {
+      border: 2px solid var(--font-color);
+      width: fit-content;
+      display: flex;
+
+      input {
+        border: none;
+        padding: 0 1rem;
+      }
+
+      button {
+        border: none;
+        background-color: var(--secondary-color);
+        color: var(--font-color);
+        padding: 0.8rem 1.8rem;
+        white-space: nowrap;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: var(--background-color);
+      }
+    }
+  }
+
+  .social-media {
+    cursor: pointer;
+
+    svg:hover {
+      path {
+        transition: all 0.3s;
+        fill: var(--font-color);
       }
     }
   }
@@ -229,6 +283,9 @@ header {
         opacity: 1;
         z-index: 1;
       }
+      a:hover {
+        scale: 1.1;
+      }
 
       .when-where {
         left: 3rem;
@@ -246,6 +303,27 @@ header {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  footer {
+    min-height: fit-content;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    padding: 3rem;
+    flex-direction: row;
+    align-items: end;
+
+    form {
+      p {
+        max-width: 400px;
+      }
+
+      .input-button-newsletter {
+        input {
+          width: 300px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1000px) {
@@ -259,6 +337,8 @@ header {
       align-items: center;
       margin: 5rem 0;
       width: fit-content;
+      background-color: var(--background-color);
+      color: var(--font-color);
 
       img {
         height: 500px;
