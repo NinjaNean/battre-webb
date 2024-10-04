@@ -16,6 +16,10 @@ body {
   background-color: var(--font-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -23,7 +27,6 @@ nav {
   font-size: 1.5rem;
   padding: 1rem;
   background-color: var(--background-color);
-  color: var(--font-color);
 
   ol {
     gap: 0.5rem;
@@ -40,6 +43,7 @@ nav {
       text-transform: uppercase;
       letter-spacing: 2px;
       border-bottom: 2px solid transparent;
+      color: var(--font-color);
     }
     li:hover {
       cursor: pointer;
@@ -145,7 +149,6 @@ header {
         width: fit-content;
         padding: 0.5rem;
         color: var(--font-color);
-        text-decoration: none;
         margin-top: 3rem;
         font-size: 1.4rem;
         transition: all 0.3s;
