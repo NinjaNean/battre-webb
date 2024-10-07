@@ -214,7 +214,7 @@ footer {
   min-height: 330px;
   background-color: var(--background-color);
   color: var(--font-color);
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -253,6 +253,19 @@ footer {
     }
   }
 
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.5rem 0;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
   .social-media {
     cursor: pointer;
 
@@ -260,6 +273,22 @@ footer {
       path {
         transition: all 0.3s;
         fill: var(--font-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  footer {
+    form {
+      .input-button-newsletter {
+        input {
+          padding: 0 0.5rem;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+        }
       }
     }
   }
@@ -377,6 +406,10 @@ footer {
           width: 300px;
         }
       }
+    }
+
+    .contact-us {
+      padding: 0;
     }
   }
 }
