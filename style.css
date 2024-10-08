@@ -217,14 +217,16 @@ header {
 }
 
 .ticket-page {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 5rem;
+  row-gap: 2rem;
   padding: 1rem;
 
-  > section {
+  .ticket-choice {
     display: grid;
     gap: 1rem;
+    padding-bottom: 2rem;
 
     .middle {
       border-bottom: 2px solid var(--background-color);
@@ -237,7 +239,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+  
       a {
         background-color: var(--secondary-color);
         padding: 0.5rem 1.5rem;
@@ -246,6 +248,19 @@ header {
       a:hover {
         filter: grayscale(0.3);
       }
+    }
+  
+  }
+
+  .ticket-info {
+    display: grid;
+    gap: 1rem;
+    
+    ul {
+      display: grid;
+      gap: 0.5rem;
+      padding-left: 1rem;
+
     }
   }
 }
@@ -521,6 +536,15 @@ footer {
 
     h1 {
       grid-column: span 3;
+    }
+  }
+
+  .ticket-page {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 3rem;
+
+    h1 {
+      grid-column: span 2;
     }
   }
 }
