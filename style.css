@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -20,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-nav {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -63,7 +63,6 @@ header {
 
   section {
     a {
-      background-color: var(--font-color);
       padding: 0.8rem 2rem;
       border-radius: 1rem 0 1rem 0;
       color: var(--background-color);
@@ -74,6 +73,10 @@ header {
       margin-bottom: 1rem;
       display: block;
       width: fit-content;
+      transition: all 0.3s;
+    }
+    a:hover {
+      background-color: #9c3b14;
     }
 
     h1 {
@@ -152,8 +155,10 @@ header {
   gap: 3rem;
 
   h1 {
+    text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
+    padding: 0.5rem;
   }
 
   .lineUp-list {
@@ -173,6 +178,7 @@ header {
       background-color: var(--background-color);
       color: var(--font-color);
       border: 5px solid var(--secondary-color);
+      box-shadow: 2px 4px 12px #0000007a;
 
       img {
         height: 250px;
@@ -195,38 +201,44 @@ header {
     padding: 1rem;
   }
 
-  .program-day {
-    div {
-      background-color: var(--secondary-color);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 1.5rem;
 
-      h2 {
-        text-transform: uppercase;
-      }
-    }
+    .program-day {
+      div {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
 
-    .schedule {
-      padding: 1rem;
-      display: grid;
-      gap: 5px;
-      border-bottom: 1px solid var(--background-color);
-
-      .time {
-        color: var(--secondary-color);
-        width: fit-content;
-        white-space: nowrap;
+        h2 {
+          text-transform: uppercase;
+        }
       }
 
-      .title,
-      .lunch {
-        font-weight: bold;
-      }
+      .schedule {
+        padding: 1rem;
+        display: grid;
+        gap: 5px;
+        border-bottom: 1px solid var(--background-color);
 
-      .talkers-name {
-        text-transform: uppercase;
-        font-weight: 300;
+        .time {
+          color: var(--secondary-color);
+          width: fit-content;
+          white-space: nowrap;
+        }
+
+        .title,
+        .lunch {
+          font-weight: bold;
+        }
+
+        .talkers-name {
+          text-transform: uppercase;
+          font-weight: 300;
+        }
       }
     }
   }
@@ -236,6 +248,10 @@ header {
   position: fixed;
   bottom: 0.5rem;
   right: 0.5rem;
+
+  :hover {
+    scale: 1.1;
+  }
 }
 
 .ticket-page {
@@ -248,7 +264,6 @@ header {
   .ticket-choice {
     display: grid;
     gap: 1rem;
-    padding-bottom: 2rem;
 
     .middle {
       border-bottom: 2px solid var(--background-color);
@@ -263,12 +278,18 @@ header {
       justify-content: space-between;
 
       a {
-        background-color: var(--secondary-color);
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1.8rem;
+        border-radius: 1rem 0 1rem 0;
         color: var(--font-color);
+        background-color: var(--secondary-color);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        width: fit-content;
+        transition: all 0.3s;
       }
       a:hover {
-        filter: grayscale(0.3);
+        background-color: #9c3b14;
       }
     }
   }
@@ -285,10 +306,70 @@ header {
   }
 }
 
+.form-menu {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+
+  a {
+    padding: 0.8rem 2rem;
+    border-radius: 1rem 0 1rem 0;
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
+    text-transform: uppercase;
+  }
+  a:hover {
+    scale: 1.1;
+  }
+
+  .progression-bar {
+  }
+}
+
+.form-page {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding: 5rem 0;
+
+  form {
+    box-shadow: 2px 4px 12px #00000040;
+    background-color: var(--font-color);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .top-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    select {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+  }
+}
+
 footer {
   background-color: var(--background-color);
   color: var(--font-color);
-  padding: 1rem;
+  padding: 1rem 1rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -323,7 +404,7 @@ footer {
       }
       button:hover {
         cursor: pointer;
-        background-color: var(--background-color);
+        background-color: #9c3b14;
       }
     }
   }
@@ -354,7 +435,15 @@ footer {
 }
 
 @media (max-width: 370px) {
+  .lineUp-page {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
   footer {
+    padding: 1rem 0.5rem 5rem;
+
     form {
       .input-button-newsletter {
         input {
@@ -370,7 +459,7 @@ footer {
 }
 
 @media (min-width: 700px) {
-  nav {
+  .menu {
     align-items: center;
 
     ol {
@@ -383,23 +472,17 @@ footer {
     padding-bottom: 4rem;
   }
 
-  .program-page {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-
-    h1 {
-      grid-column: span 2;
-    }
-  }
-
   .back-to-top {
     bottom: 1rem;
     right: 1rem;
   }
 
+  .ticket-page {
+    padding: 3rem;
+  }
+
   footer {
-    padding: 3rem 5rem;
+    padding: 3rem 3rem 6rem;
     flex-direction: row;
     align-items: end;
 
@@ -422,7 +505,7 @@ footer {
 }
 
 @media (min-width: 1000px) {
-  nav {
+  .menu {
     padding: 1rem 3rem;
   }
 
@@ -460,19 +543,9 @@ footer {
     }
   }
 
-  .program-page {
-    padding: 3rem;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-    h1 {
-      grid-column: span 3;
-    }
-  }
-
   .ticket-page {
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem 3rem;
+    padding: 6rem 3rem;
 
     h1 {
       grid-column: span 2;
