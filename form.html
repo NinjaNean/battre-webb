@@ -26,40 +26,40 @@
     </nav>
 
     <main class="form-page">
-      <form action="">
+      <form action="#">
         <div>
           <label class="top-text">
             Förnamn*
-            <input type="text" placeholder="Ditt förnamn" />
+            <input type="text" placeholder="Ditt förnamn" required />
           </label>
-          <label class="top-text"> Efternamn* <input type="text" placeholder="Ditt efternamn" /> </label>
+          <label class="top-text"> Efternamn* <input type="text" placeholder="Ditt efternamn" required /> </label>
         </div>
 
         <div>
           <label class="top-text">
             Email*
-            <input type="email" placeholder="Din E-postadress" />
+            <input type="email" placeholder="Din E-postadress" required />
           </label>
 
           <label class="top-text">
             Född*
-            <input type="date" />
+            <input type="date" required />
           </label>
         </div>
 
-        <label class="top-text">
-          Allergier
-          <textarea></textarea>
-        </label>
-
-        <legend class="top-text">
+        <legend>
           Lunch:
           <label> <input type="radio" name="food" /> Fisk </label>
           <label> <input type="radio" name="food" /> Kött </label>
           <label> <input type="radio" name="food" /> Vegetariskt </label>
         </legend>
 
-        <button>Boka</button>
+        <label class="top-text">
+          Allergier
+          <textarea></textarea>
+        </label>
+
+        <button type="submit">Boka</button>
       </form>
     </main>
   </body>
