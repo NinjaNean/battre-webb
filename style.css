@@ -473,16 +473,6 @@ header {
   text-align: center;
   padding: 5rem 0.5rem;
 
-  .finished {
-    span {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-    }
-    div {
-      background-color: var(--secondary-color);
-    }
-  }
-
   h1 {
     font-size: 3rem;
   }
@@ -490,6 +480,16 @@ header {
   p {
     max-width: 500px;
     margin: auto;
+  }
+}
+
+.finished {
+  span {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+  div {
+    background-color: var(--secondary-color);
   }
 }
 
