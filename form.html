@@ -32,7 +32,10 @@
             Förnamn*
             <input type="text" placeholder="Ditt förnamn" required />
           </label>
-          <label class="top-text"> Efternamn* <input type="text" placeholder="Ditt efternamn" required /> </label>
+          <label class="top-text">
+            Efternamn*
+            <input type="text" placeholder="Ditt efternamn" required />
+          </label>
         </div>
 
         <div>
@@ -47,16 +50,28 @@
           </label>
         </div>
 
-        <legend>
-          Lunch:
-          <label> <input type="radio" name="food" /> Fisk </label>
-          <label> <input type="radio" name="food" /> Kött </label>
-          <label> <input type="radio" name="food" /> Vegetariskt </label>
-        </legend>
+        <div>
+          <legend class="days-checkbox">
+            Välj seminarie dagar:
+            <label><input type="checkbox" />Fredag</label>
+            <label><input type="checkbox" />Lördag</label>
+            <label><input type="checkbox" />Söndag</label>
+          </legend>
+
+          <label class="top-text">
+            Mat:
+            <select name="mat" required>
+              <option value="" disabled selected>Välj</option>
+              <option value="fisk">Fisk</option>
+              <option value="kott">Kött</option>
+              <option value="vego">Vego</option>
+            </select>
+          </label>
+        </div>
 
         <label class="top-text">
           Allergier
-          <textarea></textarea>
+          <textarea placeholder="Meddelande..."></textarea>
         </label>
 
         <button type="submit">Boka</button>
