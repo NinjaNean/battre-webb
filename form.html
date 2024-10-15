@@ -24,22 +24,37 @@
     </section>
 
     <main class="form-page">
-      <form action="thanks.html">
+      <form action="payment.html">
         <div>
           <label class="top-text">
             Förnamn*
-            <input type="text" placeholder="Ditt förnamn" required />
+            <input
+              type="text"
+              placeholder="Ditt förnamn"
+              autocomplete="name"
+              required
+            />
           </label>
           <label class="top-text">
             Efternamn*
-            <input type="text" placeholder="Ditt efternamn" required />
+            <input
+              type="text"
+              placeholder="Ditt efternamn"
+              autocomplete="family-name"
+              required
+            />
           </label>
         </div>
 
         <div>
           <label class="top-text">
             Email*
-            <input type="email" placeholder="Din E-postadress" required />
+            <input
+              type="email"
+              placeholder="Din E-postadress"
+              autocomplete="email"
+              required
+            />
           </label>
 
           <label class="top-text">
@@ -74,7 +89,7 @@
 
         <div class="form-buttons">
           <a href="tickets.html">Avbryt</a>
-          <button type="submit">Boka</button>
+          <button type="submit">Fortsätt</button>
         </div>
       </form>
     </main>
