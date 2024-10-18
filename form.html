@@ -15,83 +15,70 @@
     <title>Bättre webb</title>
   </head>
   <body>
-    <section class="progression-bar">
-      <span>&#10003;</span>
-      <div></div>
-      <span>2</span>
-      <div></div>
-      <span>3</span>
-    </section>
+    <div>
+      <section class="progression-bar">
+        <span>&#10003;</span>
+        <div></div>
+        <span>2</span>
+        <div></div>
+        <span>3</span>
+      </section>
 
-    <main class="form-page">
-      <form action="payment.html">
-        <div>
-          <label class="top-text">
-            Förnamn*
-            <input
-              type="text"
-              placeholder="Ditt förnamn"
-              autocomplete="name"
-              required
-            />
-          </label>
-          <label class="top-text">
-            Efternamn*
-            <input
-              type="text"
-              placeholder="Ditt efternamn"
-              autocomplete="family-name"
-              required
-            />
-          </label>
-        </div>
+      <main class="form-page">
+        <form action="payment.html">
+          <div>
+            <label class="top-text">
+              Förnamn*
+              <input type="text" placeholder="Ditt förnamn" autocomplete="name" required />
+            </label>
+            <label class="top-text">
+              Efternamn*
+              <input type="text" placeholder="Ditt efternamn" autocomplete="family-name" required />
+            </label>
+          </div>
 
-        <div>
-          <label class="top-text">
-            Email*
-            <input
-              type="email"
-              placeholder="Din E-postadress"
-              autocomplete="email"
-              required
-            />
-          </label>
+          <div>
+            <label class="top-text">
+              Email*
+              <input type="email" placeholder="Din E-postadress" autocomplete="email" required />
+            </label>
 
-          <label class="top-text">
-            Född*
-            <input type="date" required />
-          </label>
-        </div>
+            <label class="top-text">
+              Född*
+              <input type="date" required />
+            </label>
+          </div>
 
-        <div>
-          <legend class="days-checkbox">
-            Välj seminarie dagar:
-            <label><input type="checkbox" />Fredag</label>
-            <label><input type="checkbox" />Lördag</label>
-            <label><input type="checkbox" />Söndag</label>
-          </legend>
+          <div>
+            <legend class="days-checkbox">
+              Välj seminarie dagar:
+              <label><input type="checkbox" />Fredag</label>
+              <label><input type="checkbox" />Lördag</label>
+              <label><input type="checkbox" />Söndag</label>
+            </legend>
+
+            <label class="top-text">
+              Mat:
+              <select name="mat" required>
+                <option value="" disabled selected>Välj</option>
+                <option value="fisk">Fisk</option>
+                <option value="kott">Kött</option>
+                <option value="vego">Vego</option>
+              </select>
+            </label>
+          </div>
 
           <label class="top-text">
-            Mat:
-            <select name="mat" required>
-              <option value="" disabled selected>Välj</option>
-              <option value="fisk">Fisk</option>
-              <option value="kott">Kött</option>
-              <option value="vego">Vego</option>
-            </select>
+            Allergier
+            <textarea placeholder="Meddelande..."></textarea>
           </label>
-        </div>
 
-        <label class="top-text">
-          Allergier
-          <textarea placeholder="Meddelande..."></textarea>
-        </label>
-
-        <div class="form-buttons">
-          <a href="tickets.html">Avbryt</a>
-          <button type="submit">Fortsätt</button>
-        </div>
-      </form>
-    </main>
+          <div class="form-buttons">
+            <a href="tickets.html">Avbryt</a>
+            <button type="submit">Fortsätt</button>
+          </div>
+        </form>
+      </main>
+    </div>
   </body>
 </html>
