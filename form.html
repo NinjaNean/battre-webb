@@ -45,7 +45,7 @@
 
             <label class="top-text">
               Född*
-              <input type="date" max="2006-01-01" required />
+              <input type="date" max="2006-01-01" autocomplete="bday" required />
             </label>
           </div>
 
@@ -57,12 +57,12 @@
           <div>
             <label class="top-text">
               Postnummer*
-              <input type="number" required />
+              <input type="number" autocomplete="postal-code" required min="10000" />
             </label>
 
             <label class="top-text">
               Stad*
-              <input type="text" required />
+              <input type="text" autocomplete="address-level2" required />
             </label>
           </div>
 
