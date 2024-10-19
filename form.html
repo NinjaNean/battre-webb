@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,20 +45,37 @@
 
             <label class="top-text">
               Född*
-              <input type="date" required />
+              <input type="date" max="2006-01-01" required />
+            </label>
+          </div>
+
+          <label class="top-text">
+            Adress*
+            <input type="text" required autocomplete="address-line1" />
+          </label>
+
+          <div>
+            <label class="top-text">
+              Postnummer*
+              <input type="number" required />
+            </label>
+
+            <label class="top-text">
+              Stad*
+              <input type="text" required />
             </label>
           </div>
 
           <div>
-            <legend class="days-checkbox">
-              Välj seminarie dagar:
+            <p class="days-checkbox">
+              Välj seminarie dagar*
               <label><input type="checkbox" />Fredag</label>
               <label><input type="checkbox" />Lördag</label>
               <label><input type="checkbox" />Söndag</label>
-            </legend>
+            </p>
 
             <label class="top-text">
-              Mat:
+              Mat*
               <select name="mat" required>
                 <option value="" disabled selected>Välj</option>
                 <option value="fisk">Fisk</option>

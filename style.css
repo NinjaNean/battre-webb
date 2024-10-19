@@ -235,6 +235,10 @@ header {
         gap: 5px;
         border-bottom: 1px solid var(--background-color);
 
+        &:last-child {
+          border: none;
+        }
+
         .time {
           color: var(--secondary-color);
           width: fit-content;
@@ -393,13 +397,6 @@ header {
       border-radius: 5px;
     }
 
-    legend {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
     input:focus-visible,
     textarea:focus-visible {
       outline: none;
@@ -408,7 +405,8 @@ header {
     .days-checkbox {
       display: flex;
       flex-direction: column;
-      min-width: 184px;
+      min-width: 182px;
+      gap: 0.3rem;
     }
 
     input[type="checkbox"] {
@@ -571,7 +569,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2.5rem;
 
   form {
     display: grid;
@@ -609,7 +607,7 @@ footer {
   .contact-us {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
     padding: 1.5rem 0;
 
     p {
@@ -620,6 +618,9 @@ footer {
   }
 
   .social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     cursor: pointer;
 
     svg:hover {
